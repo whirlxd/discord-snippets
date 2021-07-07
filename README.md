@@ -5,7 +5,7 @@
                     Making discord bots is no easy feat especially when you need to use the same code again  and again that's why for you we bring you discord-snippets 
                     eg: just type discord.embed+ to get a advanced discord embed 
 
--**Future**:
+-**Future**:<BR>
 +add more snippets<BR>
 +add more languages<BR>
 +add doc searcher<BR>
@@ -13,8 +13,8 @@
 
 # Installation <BR>
 
-*Join our server for support*
-![Click Here](https://discord.gg/fkgPVke8Rr)
+*Join our server for support*<BR>
+https://discord.gg/fkgPVke8Rr
 
 
 
