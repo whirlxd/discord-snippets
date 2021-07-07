@@ -1,0 +1,113 @@
+{
+  "A Normal Discord command": {
+    "prefix": "discord.command",
+    "body": [
+      "module.exports = {",
+      "name : \"\",",
+      "async execute(client , message , args){",
+      "}",
+      "}"
+    ],
+    "description": "A Normal Discord command"
+  },
+   "A Advanced Discord command": {
+    "prefix": "discord.command+",
+    "body": [
+      "module.exports = {",
+      "name : \"\",",
+      "description : \"\",",
+      "usage : \"\",",
+      "aliases [\"\",\"\"],",
+      "async execute(client , message , args){",
+      "}",
+      "}"
+    ],
+    "description": "A Normal Discord command"
+  },
+  "A Normal Discord index bot": {
+    "prefix": "discord.indexbot",
+    "body": [
+      "const Discord = require('discord.js');",
+      "const { prefix , token } = require('config.json')",
+      "const client = new Discord.Client();",
+      "",
+      "client.once('ready', () => {",
+      "	console.log('Ready!');",
+      "});",
+      "",
+      "client.on('message', message => {",
+      "	if (!message.content.startWith(prefix) || message.author.bot) {",
+      "		return;",
+      "	}",
+      "      const args = message.content.slice(prefix.length).trim().split(/ +/);",
+      "      if(message.content == '!ping') {",
+      "         message.channel.send(\"Pong!\") } //copy paste this to add more commands!",
+      "      });",
+      "",
+      "client.login(token);"
+    ],
+    "description": "A Normal Discord index bot"
+  },
+  "A Normal Discord reaction chain": {
+    "prefix": "discord.chainreaction",
+    "body": [
+      "message.react('🍎')",
+      ".then(() => message.react('🍊'))",
+      ".then(() => message.react('🍇')",
+      ".catch(error => console.error('One of the emojis failed to react:', error));"
+    ],
+    "description": "A Normal Discord reaction chain"
+  },
+  "A Normal Discord message embed": {
+    "prefix": "discord.embed",
+    "body": [
+      "const embed = new Discord.MessageEmbed()",
+      "     .setColor('#0099ff')",
+      "    .setTitle('title')",
+      "    .setDescription('description')",
+      "    .addFields(",
+      "        { name: 'title', value: 'value', inline: false },",
+      "    )",
+      "",
+      "    message.channel.send(embed);",
+      "     "
+    ],
+    "description": "A Normal Discord message embed"
+  }, 
+  "A Advanced Discord message embed": {
+    "prefix": "discord.embed+",
+    "body": [
+      "const embed = new Discord.MessageEmbed()",
+      "	.setColor('#0099ff')",
+      "	.setTitle('Some title')",
+      "	.setURL('https://whirlwhirls.ml')",
+      "	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')",
+      "	.setDescription('Some description here')",
+      "	.setThumbnail('https://i.imgur.com/wSTFkRM.png')",
+      "	.addFields(",
+      "		{ name: 'Regular field title', value: 'Some value here' },",
+      "		{ name: '\\u200B', value: '\\u200B' },",
+      "		{ name: 'Inline field title', value: 'Some value here', inline: true },",
+      "		{ name: 'Inline field title', value: 'Some value here', inline: true },",
+      "	)",
+      "	.addField('Inline field title', 'Some value here', true)",
+      "	.setImage('https://i.imgur.com/wSTFkRM.png')",
+      "	.setTimestamp()",
+      "	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');",
+      "",
+      "message.channel.send(embed);",
+      "     "
+    ],
+    "description": "A Advanced Discord message embed"
+  },
+  "A normal Discord mentioned user": {
+    "prefix": "discord.mention.args",
+    "body": [
+      "const mentionedUser = message.mentions.users.first();"
+    ],
+    "description": "A normal Discord mentioned user"
+  }
+ 
+
+
+}
